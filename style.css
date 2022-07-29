@@ -1,0 +1,70 @@
+/* Couleurs
+Rouge:  rgb(255, 122, 122)
+Vert:  rgb(56, 204, 140)
+Bleu (fond de la box en haut):  rgb(96, 85, 165)
+Bleu foncé (couleur du bord de l’input quand l’utilisateur à cliqué):  rgb(62, 60, 73)
+Gris clair (bord de l’input en temps normal + texte en bas du bouton vert):  rgb(185, 182,211)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 122, 122);
+    background-image: url('assets/bg-intro-desktop.png');
+    font-family: Poppins;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#introduction {
+    color: white;
+    order: 1;
+    align-self: flex-start;
+}
+
+#free-trial {
+    background-color: rgb(96, 85, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 600px;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 10px;
+    order: 2;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+#form {
+    background-color: white;
+    height: 50%;
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#form form {
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+    width: 20%;
+}
