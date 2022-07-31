@@ -9,25 +9,31 @@
     <title>Intégration</title>
 </head>
 <body>
-    <div>
-        <div id="introduction">
+    <div id="container">
+        <div id="left-part">
             <h1>Learn to code by watching others</h1>
-            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how develeopers think is invaluable.</p>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
-        <figure>
-            <div id="free-trial"><p><span class="bold">Try it free 7 days </span>then $20/mo. thereafter</p></div>
-        </figure>
-        <div id="form">
-        <form>
-            <input type="text" id="form--firstname" placeholder="First name"><br />
-            <input type="text" id="form--lastname" placeholder="Last name"><br />
-            <input type="text" id="form--email" placeholder="Email address"><br />
-            <input type="password" id="form--password" placeholder="Password"><br />
-        </form>
-        <button id="form--submit">Claim your free trial</button>
-        <footer>
-            <p>By clicking on the button, you agree to our <a href="#">Terms and Services</a></p>
-        </footer>
+        <div id="right-part">
+            <figure>
+                <a href="#"><div id="free-trial" role="button" tabindex="0"><p><span class="bold">Try it free 7 days </span>then $20/mo. thereafter</p></div></a>
+            </figure>
+            <div id="form">
+            <form action = "#" name = "form1" onsubmit="return false">
+                <input type="text" name="firstname" id ="form--firstname" placeholder="First name"><br />
+                <p class="form--error" id="form--firstname-empty">First Name cannot be empty</p>
+                <input type="text" name="lastname" id ="form--lastname" placeholder="Last name"><br />
+                <p class="form--error" id="form--lastname-empty">Last Name cannot be empty</p>
+                <input type="text" name="email" id ="form--email" placeholder="Email address"><br />
+                <p class="form--error" id="form--email-error">It looks like this is an invalid email address.</p>
+                <input type="password" name="password" id ="form--password" placeholder="Password"> <br />
+                <p class="form--error" id="form--password-empty">Password cannot be empty</p>
+                <input type="submit" name="submit" id="form--submit" value="Claim your free trial" onclick="checkFields()">
+            </form>
+            <footer>
+                <p>By clicking on the button, you agree to our <a href="#">Terms and Services</a></p>
+            </footer>
+            </div>
         </div>
     </div>
 </body>
