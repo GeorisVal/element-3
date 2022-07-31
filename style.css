@@ -5,70 +5,204 @@ Bleu (fond de la box en haut):  rgb(96, 85, 165)
 Bleu foncé (couleur du bord de l’input quand l’utilisateur à cliqué):  rgb(62, 60, 73)
 Gris clair (bord de l’input en temps normal + texte en bas du bouton vert):  rgb(185, 182,211)
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('assets/bg-intro-desktop.png');
+    }
+
+    #container {
+        width: 80%; 
+        height: 80%;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    #left-part {
+        width: 45%;
+    }
+
+    #left-part h1 {
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 40px;
+    }
+
+    #right-part {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    #free-trial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url('assets/bg-intro-mobile.png');
+    }
+
+    #container {
+        width: 90%; 
+        height: 80%;
+        flex-direction: column;
+        margin-top: 50vh;
+        margin-bottom: 20px;
+    }
+
+    #left-part {
+        margin-bottom: 30px;
+        text-align:center;
+        width: 100%;   
+    }
+
+    #left-part h1 {
+        font-size: 25px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    #right-part {
+        width: 100%;
+    }
+
+    #free-trial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 42px;
+        margin-top: 30px;
+    }
+
 }
 
 body, html {
     height: 100%;
     width: 100%;
     background-color: rgb(255, 122, 122);
-    background-image: url('assets/bg-intro-desktop.png');
     font-family: Poppins;
     font-size: 16px;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-#introduction {
-    color: white;
-    order: 1;
-    align-self: flex-start;
-    height: 100%;
-    width: 25%;
-    text-align: left;
-}
-
-#free-trial {
-    background-color: rgb(96, 85, 165);
-    display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 600px;
-    color: #FFF;
-    font-size: 14px;
-    border-radius: 10px;
-    order: 2;
 }
 
 .bold {
     font-weight: 600;
 }
 
-#form {
-    background-color: white;
-    height: 50%;
-    order: 3;
+#container {
+    max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content:space-around;
+    flex-wrap: nowrap;
 }
 
-#form form {
+#left-part {
+    color: #FFF;
+}
+
+#free-trial {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(96, 85, 165);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.15)
+}
+
+form {
     align-self: flex-start;
-    margin-left: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 33px;
+}
+
+#form {
+    background: #FFF;
+    border-radius: 10px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 input {
-    border-radius: 5px;
-    padding: 10px;
     width: 80%;
+    height: 54px;
+    font-family: Poppins;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 15px;
+    padding-left: 30px;
+    margin-top: 10px;
+    border: 1px solid rgb(185, 182,211);
+}
+
+#form--firstname, #form--lastname {
+    text-transform: capitalize;
+}
+
+#form .form--error {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-style: italic;
+    color:rgb(255, 122, 122);
+    font-weight: 500;
+    text-align: right;
+    margin-right: 4vw;
+    visibility: collapse;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(62, 60, 73);
+}
+
+
+#form--submit {
+    width: 80%;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgb(56, 204, 140);
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    font-size: 9px;
+    margin-bottom: 30px;
+    color: rgb(185, 182,211);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+}
+
+footer a {
+    color:rgb(255, 122, 122);
+    font-weight: 700;
 }
