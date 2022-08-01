@@ -20,20 +20,29 @@
             </figure>
             <div id="form">
             <form action = "#" name = "form1" onsubmit="return false">
-                <input type="text" name="firstname" id ="form--firstname" placeholder="First name"><br />
+                <input type="text" name="firstname" id ="form--firstname" placeholder="First name"onblur="checkFirstName()"><br />
                 <p class="form--error" id="form--firstname-empty">First Name cannot be empty</p>
-                <input type="text" name="lastname" id ="form--lastname" placeholder="Last name"><br />
+                <input type="text" name="lastname" id ="form--lastname" placeholder="Last name" onblur="checkLastName()"><br />
                 <p class="form--error" id="form--lastname-empty">Last Name cannot be empty</p>
-                <input type="text" name="email" id ="form--email" placeholder="Email address"><br />
+                <input type="email" name="email" id ="form--email" placeholder="Email address" onblur="checkEmail()"><br />
                 <p class="form--error" id="form--email-error">It looks like this is an invalid email address.</p>
-                <input type="password" name="password" id ="form--password" placeholder="Password"> <br />
+                <input type="password" name="password" id ="form--password" placeholder="Password" onblur="checkPassword()"> <br />
                 <p class="form--error" id="form--password-empty">Password cannot be empty</p>
                 <input type="submit" name="submit" id="form--submit" value="Claim your free trial" onclick="checkFields()">
             </form>
-            <footer>
+            <div id="terms">
                 <p>By clicking on the button, you agree to our <a href="#">Terms and Services</a></p>
-            </footer>
             </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <div id="modal--header">
+            <p>Registration complete !<span id="modal--close" onclick="closeModal()">&times;</span></p>
+        </div>
+        <div id="modal--content">
+            <p id="modal--text">Hewo, random text</p>
+            </span>
         </div>
     </div>
 </body>
